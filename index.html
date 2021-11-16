@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+   
+    <title>Practical-15</title>
+</head>
+<body>
+    <div class="parent">
+    <div class="form-container">
+        <form method="GET"
+        action=""
+    
+        onsubmit="return validateForm()">
+            <h1>Create Account</h1>
+            <div class="form-comp">
+                <label for="username">Username</label>
+                <input type="text" id="username" pattern="^[a-z]+$" placeholder="Enter username">
+            </div>
+            <div class="form-comp">
+                <label for="email">Email</label>
+                <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title = "Invalid Email Address" placeholder="Enter email">
+            </div>
+
+            <div class="form-comp">
+                <label for="password">Password</label>
+                <input type="password" id="password"  placeholder="Enter password">
+                
+            </div>
+
+            <div class="form-comp">
+                <label for="confirm-pass">Password Again</label>
+                <input type="password" id="confirm-pass" placeholder="Enter password again">
+            </div>
+            <button type="submit" class="submit">
+                Submit
+            </button>
+            
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    function validateForm(){
+        var u = document.getElementById("username").value
+        var pass = document.getElementById("password").value;
+        var cpass = document.getElementById("confirm-pass");
+        console.log(u);
+        if(u == ""){
+            alert("Enter your username");
+            return false;
+        }
+
+    }
+
+
+</script>
+
+</html>
